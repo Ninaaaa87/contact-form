@@ -1,0 +1,39 @@
+
+    <html> 
+  <head></head>
+    <body> 
+            <form name="myForm" method="post" onsubmit="validateForm()">
+                <input type="text" placeholder="Unesi ime" name="username">
+                <input type="password" placeholder="Unesi pasword" name="password">
+            
+                <input type="date" name="datum">
+                <input type="email" name="email">
+                <input type="submit" name="submit">
+                
+            
+            
+            </form>
+    
+
+    <script type="text/javascript">
+       function validateForm() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+        var datum = document.forms["myForm"]["datum"].value;
+        var email = document.forms["myForm"]["email"].value;
+        if (username !== "" && password !== "") {
+             alert(`
+       ${username}, ${password}, ${datum}, ${email}
+              `);
+        } else {
+            alert("Some fields are not filled");
+            return false;
+        }
+      }
+    </script>
+    
+    
+    </body>
+
+</html>
+            
